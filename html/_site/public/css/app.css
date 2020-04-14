@@ -1,0 +1,309 @@
+body {
+  background: #F1F1F1;
+  font-family: 'Poppins', sans-serif; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+img {
+  outline: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+header {
+  background: #FFFFFF;
+  min-height: 80px;
+  border-bottom: thin solid #f5f5f5; }
+  header nav {
+    padding-top: 12px; }
+  header .navbar-brand {
+    font-weight: 600;
+    color: #45B9D3; }
+    header .navbar-brand img {
+      -webkit-animation: rotating 15s linear infinite;
+      -moz-animation: rotating 15s linear infinite;
+      -ms-animation: rotating 15s linear infinite;
+      -o-animation: rotating 15s linear infinite;
+      animation: rotating 15s linear infinite; }
+  header nav {
+    display: flex;
+    justify-content: space-between; }
+
+@-webkit-keyframes rotating
+
+/* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+footer {
+  padding: 100px 0px 20px 0px; }
+  footer p {
+    font-size: 14px;
+    color: #6A92A4;
+    letter-spacing: 0;
+    text-align: center; }
+
+.auth-card {
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.07);
+  border: thin solid #f5f5f5;
+  border-radius: 8px;
+  border: none;
+  background: #FFFFFF;
+  position: relative;
+  padding: 60px;
+  margin: 120px 0px 0px 0px; }
+  .auth-card div.card-header,
+  .auth-card div.card-body,
+  .auth-card div.card-footer {
+    background: #fff;
+    border: none; }
+  .auth-card div.card-body {
+    padding: 0px; }
+  .auth-card div.card-header > img {
+    position: absolute;
+    left: 50%;
+    margin: -160px 0px 0px -60px; }
+  .auth-card div.card-footer p {
+    text-align: Center; }
+  .auth-card .card-title {
+    font-size: 20px;
+    color: #3D4041;
+    letter-spacing: 0;
+    text-align: center; }
+    .auth-card .card-title span {
+      margin: 10px 0px;
+      font-size: 16px;
+      color: #818181;
+      letter-spacing: 0;
+      display: block; }
+  .auth-card h3 {
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    margin: 15px 0px; }
+  .auth-card > a.btn-link {
+    position: absolute;
+    right: 0px;
+    top: -40px; }
+  .auth-card div.divider {
+    position: relative; }
+    .auth-card div.divider hr {
+      margin: -20px -60px 40px -60px;
+      border-bottom: thin solid #d9d9d9;
+      position: relative;
+      z-index: 99; }
+    .auth-card div.divider span {
+      border-radius: 100px;
+      width: 44px;
+      height: 44px;
+      color: #666;
+      font-size: 14px;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      z-index: 100;
+      background: #fff;
+      border: thin solid #d8d8d8;
+      text-align: center;
+      padding-top: 10px; }
+  .auth-card form {
+    display: block;
+    padding: 0px 60px; }
+    .auth-card form button.btn-primary {
+      display: block;
+      width: 100%; }
+  .auth-card .btn-social-network {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 20px 0px; }
+
+div.form-element {
+  margin: 0px 0px 30px 0px; }
+  div.form-element a.btn-link.btn-sm {
+    font-size: 12px;
+    color: #14428F;
+    text-decoration: none;
+    font-weight: 500; }
+    div.form-element a.btn-link.btn-sm:hover {
+      color: #174ca5; }
+  div.form-element > span {
+    color: red;
+    display: block; }
+  div.form-element div.error p {
+    color: red;
+    margin: 5px 0px; }
+
+input.form-control,
+textarea.form-control {
+  background: #FFFFFF;
+  border: 1px solid #8A8A8A;
+  border-radius: 4px;
+  color: #000;
+  height: 48px;
+  outline: 0; }
+  input.form-control:focus,
+  textarea.form-control:focus {
+    /* Rectangle 4: */
+    background: #FFFFFF;
+    border: 2px solid #1478E9;
+    border-radius: 2px; }
+
+textarea.form-control {
+  height: 120px; }
+
+button.btn {
+  height: 48px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 2px; }
+  button.btn.btn-primary {
+    background: #1478E9;
+    color: #fff; }
+  button.btn.btn-file-upload {
+    width: 100%;
+    position: relative; }
+    button.btn.btn-file-upload input {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      left: 0px;
+      top: 0px; }
+
+a.btn {
+  border: none; }
+  a.btn.btn-facebook, a.btn.btn-google {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin: 0px 30px;
+    background: #326CCD;
+    border-radius: 2px;
+    height: 44px;
+    line-height: 34px;
+    min-width: 240px; }
+    a.btn.btn-facebook:hover, a.btn.btn-google:hover {
+      background: #477bd2; }
+  a.btn.btn-google {
+    background: #DA2820; }
+    a.btn.btn-google:hover {
+      background: #e13a33; }
+
+div.form-card {
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.07);
+  border: thin solid #f5f5f5;
+  border-radius: 8px;
+  background: #FFFFFF; }
+  div.form-card div.form-element input.form-control {
+    height: 44px;
+    border: thin solid #CACACA; }
+    div.form-card div.form-element input.form-control::-webkit-input-placeholder {
+      font-size: 14px;
+      color: #A7A7A7; }
+    div.form-card div.form-element input.form-control::-moz-placeholder {
+      font-size: 14px;
+      color: #A7A7A7; }
+    div.form-card div.form-element input.form-control:-ms-input-placeholder {
+      font-size: 14px;
+      color: #A7A7A7; }
+    div.form-card div.form-element input.form-control:-moz-placeholder {
+      font-size: 14px;
+      color: #A7A7A7; }
+  div.form-card div.card-title {
+    border-bottom: thin solid #d9d9d9;
+    padding: 20px 0px 20px 0px; }
+    div.form-card div.card-title div.d-flex {
+      justify-content: center;
+      margin: 0 auto;
+      align-items: center; }
+    div.form-card div.card-title img {
+      width: 50px;
+      margin-right: 20px; }
+    div.form-card div.card-title h2 {
+      font-size: 20px;
+      font-weight: 600; }
+      div.form-card div.card-title h2 span {
+        font-size: 14px;
+        color: #818181;
+        font-weight: 500; }
+  div.form-card ul.tab-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 15px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    width: 150px;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 35px;
+    padding: 13px 24px; }
+    div.form-card ul.tab-list li:hover {
+      background: #1478E9;
+      color: #fff; }
+    div.form-card ul.tab-list li.active {
+      background: #1478E9;
+      /* Rectangle: */
+      border: 1px solid #1478E9;
+      color: #fff; }
+  div.form-card ul.tab-list label {
+    left: 0px;
+    top: 0px;
+    padding: 13px 0px 0px 44px;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%; }
+  div.form-card div.card-body {
+    padding: 0px; }
+    div.form-card div.card-body h3 {
+      font-size: 16px;
+      margin: 20px 0px;
+      text-align: Center; }
+  div.form-card div.row-title {
+    position: relative; }
+    div.form-card div.row-title h4 {
+      font-weight: 600;
+      color: #1478E9;
+      font-size: 16px;
+      background: #fff;
+      padding: 5px 20px 5px 0px;
+      z-index: 101;
+      display: inline-block;
+      position: relative; }
+    div.form-card div.row-title:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      border-bottom: thin solid #1478E9;
+      top: 15px;
+      left: 0px;
+      position: absolute; }
+
+div.alert p {
+  margin: 0px; }
+
+/*# sourceMappingURL=app.css.map */

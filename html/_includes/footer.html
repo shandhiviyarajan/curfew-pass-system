@@ -1,0 +1,24 @@
+<footer>
+    <p class="text-center">
+        Designed by - SPECTRO
+    </p>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example').DataTable();
+
+        $('.tab-list li').on('click', function (e) {
+
+            var li = $(this);
+
+            var i = li.index();
+            $('.tab-list li').removeClass("active");
+            li.toggleClass("active");
+
+            $(".tab-content .tab-pane").removeClass("show active");
+            $(".tab-content .tab-pane").eq(i).addClass("show active");
+
+        })
+    });
+</script>

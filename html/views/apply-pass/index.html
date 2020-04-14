@@ -1,0 +1,110 @@
+---
+layout : default.html
+title : Curfew Pass System | Login
+---
+
+<section>
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-12">
+
+
+                <div class="card form-card">
+
+                    <div class="row no-gutters card-title justify-content-center">
+                        <div class="col-md-7">
+                            <div class="d-flex">
+                                <img src="{{ assets }}images/sl_police_logo.png" alt="">
+                                <h2>
+                                    e - Curfew Pass system <br>
+                                    <span>
+                                        Sri Lanka Police
+                                    </span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row justify-content-center no-gutters">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h3>
+                                    <strong>* Curfew Pass for </strong>- Please select category
+                                </h3>
+                                <form action="/approval" method="post" enctype="multipart/form-data">
+
+                                    <ul class="tab-list">
+                                        <li class="active">
+
+                                            <label for="personal"> Personal </label>
+                                            <input id="personal" type="radio" name="pass-type" value="personal">
+
+
+
+                                        </li>
+
+                                        <li>
+
+                                            <label for="business"> Business</label>
+                                            <input id="business" type="radio" name="pass-type" value="business">
+
+
+
+                                        </li>
+
+                                        <li>
+
+                                            <label for="expatriate"> Expatriate</label>
+                                            <input id="expatriate" type="radio" name="pass-type" value="expatriate">
+
+
+
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="personal" role="tabpanel">
+                                            {{> personal.form }}
+                                        </div>
+                                        <div class="tab-pane fade" id="business" role="tabpanel">
+
+                                            {{> business.form }}
+                                        </div>
+                                        <div class="tab-pane fade " id="expatriate" role="tabpanel">
+
+                                            {{> expatriate.form }}
+                                        </div>
+
+
+                                        <div class="col-md-12 justify-content-end">
+                                            <button class="btn btn-primary float-right"> Proceed </button>
+                                        </div>
+                                        <p>
+                                            &nbsp;
+                                        </p>
+                                        <p>
+                                            &nbsp;
+                                        </p>
+
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+</section>

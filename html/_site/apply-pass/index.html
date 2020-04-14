@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Curfew Pass System | Login | version 1.0</title>
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no shrink-to-fit=no">
+    <meta name="google-site-verification" content="" />
+
+
+    <meta itemprop="image" content="../public/images/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="96x96" href="../public/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" type="text/css" href="../public/css/app.css" />
+    <!-- chart-css -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+<main>
+    <header>
+
+    <div class="container">
+
+        <nav>
+            <a class="navbar-brand" href="/">
+                <img src="../public/svg/covid-logo.svg" alt=""> COVID-19 Situational Report - Sri Lanka
+            </a>
+
+            <!-- <a href="#" class="btn btn-link btn-secondary">
+                Dashboard
+            </a>
+            <a href="#" class="btn btn-link btn-secondary">
+                e-Curfew Pass
+            </a>
+
+            <div class="logged-in">
+                <a href="#" class="btn btn-link btn-secondary">
+                    Hello <span>Shan</span>
+                </a>
+            </div> -->
+        </nav>
+
+
+    </div>
+
+
+</header>
+    
+
+<section>
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-12">
+
+
+                <div class="card form-card">
+
+                    <div class="row no-gutters card-title justify-content-center">
+                        <div class="col-md-7">
+                            <div class="d-flex">
+                                <img src="../public/images/sl_police_logo.png" alt="">
+                                <h2>
+                                    e - Curfew Pass system <br>
+                                    <span>
+                                        Sri Lanka Police
+                                    </span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row justify-content-center no-gutters">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h3>
+                                    <strong>* Curfew Pass for </strong>- Please select category
+                                </h3>
+                                <form action="/approval" method="post" enctype="multipart/form-data">
+
+                                    <ul class="tab-list">
+                                        <li class="active">
+
+                                            <label for="personal"> Personal </label>
+                                            <input id="personal" type="radio" name="pass-type" value="personal">
+
+
+
+                                        </li>
+
+                                        <li>
+
+                                            <label for="business"> Business</label>
+                                            <input id="business" type="radio" name="pass-type" value="business">
+
+
+
+                                        </li>
+
+                                        <li>
+
+                                            <label for="expatriate"> Expatriate</label>
+                                            <input id="expatriate" type="radio" name="pass-type" value="expatriate">
+
+
+
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="personal" role="tabpanel">
+                                            <div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Personal details
+            </h4>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <input type="text" required class="form-control" placeholder="Full name">
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <input type="text" required class="form-control" placeholder="NIC Number">
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <div class="form-element">
+            <span>*</span>
+            <textarea name="reason" required id="" cols="30" rows="10" class="form-control"
+                placeholder="For the purpose of "></textarea>
+
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Area / route
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <select name="route" id="" class="form-control">
+                <option value="-1">
+                    - Select -
+                </option>
+
+                <option value="-1">
+                    Colombo 01
+                </option>
+                <option value="-1">
+                    Colombo 02
+                </option>
+                <option value="-1">
+                    Colombo 03
+                </option>
+                <option value="-1">
+                    Colombo 04
+                </option>
+                <option value="-1">
+                    Colombo 05
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>&nbsp;</span>
+            <input type="text" name="vehicle_number" required class="form-control" placeholder="Vehicle Number">
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Upload / Attach proof documents
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <button class="btn btn-secondary btn-file-upload">
+                <input type="file">
+                <i class="fa fa-upload"></i> NIC Copy
+            </button>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <button class="btn btn-secondary btn-file-upload">
+                <input type="file">
+                <i class="fa fa-upload"></i>GS Letter
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Pass duration
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <div class="input-group">
+                <input type="date" required class="form-control" placeholder="Date From">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <div class="input-group">
+                <input type="date" required class="form-control" placeholder="Date To">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+                                        </div>
+                                        <div class="tab-pane fade" id="business" role="tabpanel">
+
+                                            <div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Business details
+            </h4>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <input type="text" required class="form-control" placeholder="Business Name">
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <input type="text" required class="form-control" placeholder="BR number">
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <div class="form-element">
+            <span>*</span>
+            <textarea name="reason" required id="" cols="30" rows="10" class="form-control"
+                placeholder="For the purpose of "></textarea>
+
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Area / route
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <select name="route" id="" class="form-control">
+                <option value="-1">
+                    - Select -
+                </option>
+
+                <option value="-1">
+                    Colombo 01
+                </option>
+                <option value="-1">
+                    Colombo 02
+                </option>
+                <option value="-1">
+                    Colombo 03
+                </option>
+                <option value="-1">
+                    Colombo 04
+                </option>
+                <option value="-1">
+                    Colombo 05
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+            </select>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Upload / Attach proof documents
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <button class="btn btn-secondary btn-file-upload">
+                <input type="file">
+                <i class="fa fa-upload"></i> BR Copy
+            </button>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <button class="btn btn-secondary btn-file-upload">
+                <input type="file">
+                <i class="fa fa-upload"></i> Request letter
+            </button>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <button class="btn btn-secondary btn-file-upload">
+                <input type="file">
+                <i class="fa fa-upload"></i>Employee list
+            </button>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="alert alert-info">
+            (Images - jpg, jpeg, png OR .pdf formats only & less than 5 MB)
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Pass duration
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <div class="input-group">
+                <input type="date" required class="form-control" placeholder="Date From">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <div class="input-group">
+                <input type="date" required class="form-control" placeholder="Date To">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+                                        </div>
+                                        <div class="tab-pane fade " id="expatriate" role="tabpanel">
+
+                                            <div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Personal details
+            </h4>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <input type="text" required class="form-control" placeholder="Full name">
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <input type="text" required class="form-control" placeholder="Passport Number">
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <select name="route" id="" class="form-control">
+                <option value="-1">
+                    - Your Country -
+                </option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <div class="form-element">
+            <span>*</span>
+            <textarea name="reason" required id="" cols="30" rows="10" class="form-control"
+                placeholder="Curfew pass for the purpose of "></textarea>
+
+        </div>
+    </div>
+
+
+
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Area / route
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <select name="route" id="" class="form-control">
+                <option value="-1">
+                    - Select -
+                </option>
+
+                <option value="-1">
+                    Colombo 01
+                </option>
+                <option value="-1">
+                    Colombo 02
+                </option>
+                <option value="-1">
+                    Colombo 03
+                </option>
+                <option value="-1">
+                    Colombo 04
+                </option>
+                <option value="-1">
+                    Colombo 05
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+                <option value="-1">
+                    Colombo 06
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <input type="text" name="vehicle_number" required class="form-control" placeholder="Vehicle Number">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Upload / Attach proof documents
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <button class="btn btn-secondary btn-file-upload">
+                <input type="file">
+                <i class="fa fa-upload"></i> Passport Copy
+            </button>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <button class="btn btn-secondary btn-file-upload">
+                <input type="file">
+                <i class="fa fa-upload"></i>GS Letter
+            </button>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="alert alert-info">
+            <small> Upload images - jpg, jpeg, png OR .pdf formats only & less than 5 MB</small>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row-title">
+            <h4>
+                Pass duration
+            </h4>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <div class="input-group">
+                <input type="date" required class="form-control" placeholder="Date From">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-element">
+            <span>*</span>
+            <div class="input-group">
+                <input type="date" required class="form-control" placeholder="Date To">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+                                        </div>
+
+
+                                        <div class="col-md-12 justify-content-end">
+                                            <button class="btn btn-primary float-right"> Proceed </button>
+                                        </div>
+                                        <p>
+                                            &nbsp;
+                                        </p>
+                                        <p>
+                                            &nbsp;
+                                        </p>
+
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+</section>
+</main>
+<footer>
+    <p class="text-center">
+        Designed by - SPECTRO
+    </p>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example').DataTable();
+
+        $('.tab-list li').on('click', function (e) {
+
+            var li = $(this);
+
+            var i = li.index();
+            $('.tab-list li').removeClass("active");
+            li.toggleClass("active");
+
+            $(".tab-content .tab-pane").removeClass("show active");
+            $(".tab-content .tab-pane").eq(i).addClass("show active");
+
+        })
+    });
+</script>
+</body>
+</html>
+

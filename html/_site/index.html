@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Curfew Pass System | Home | version 1.0</title>
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no shrink-to-fit=no">
+    <meta name="google-site-verification" content="" />
+
+
+    <meta itemprop="image" content="public/images/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- custom-css -->
+    <link rel="stylesheet" type="text/css" href="public/css/app.css" />
+    <!-- chart-css -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+<main>
+    <header>
+
+    <div class="container">
+
+        <nav>
+            <a class="navbar-brand" href="/">
+                <img src="public/svg/covid-logo.svg" alt=""> COVID-19 Situational Report - Sri Lanka
+            </a>
+
+            <!-- <a href="#" class="btn btn-link btn-secondary">
+                Dashboard
+            </a>
+            <a href="#" class="btn btn-link btn-secondary">
+                e-Curfew Pass
+            </a>
+
+            <div class="logged-in">
+                <a href="#" class="btn btn-link btn-secondary">
+                    Hello <span>Shan</span>
+                </a>
+            </div> -->
+        </nav>
+
+
+    </div>
+
+
+</header>
+    
+
+
+
+<section>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card auth-card">
+                    <a href="#" class="btn-link">Instructions </a>
+                    <div class="card-header">
+                        <img src="public/images/sl_police_logo.png" alt="">
+                        <h2 class="card-title">
+                            e - Curfew Pass system - Sri Lanka
+                            <span>
+                                Sri Lanka Police
+                            </span>
+                        </h2>
+                        <h3>
+                            Sign in with your social network
+                        </h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="btn-social-network">
+
+                            <a href="#" class="btn btn-primary btn-facebook">
+                                <i class="fa fa-facebook"></i> <span>
+                                    facebook
+                                </span>
+                            </a>
+                            <a href="#" class="btn btn-primary btn-google">
+                                <i class="fa fa-google"></i> <span>
+                                    Google
+                                </span>
+                            </a>
+
+                        </div>
+
+                        <div class="divider">
+
+                            <span>
+                                or
+                            </span>
+                            <hr>
+                        </div>
+
+
+                        <form action="/apply-pass">
+
+
+                            <div class="form-element">
+                                <input required class="form-control" autofocus type="text" name="username"
+                                    placeholder="Username / Email Address" />
+                            </div>
+
+                            <div class="form-element">
+                                <input required class="form-control" type="password" name="password"
+                                    placeholder="Password" />
+                            </div>
+                            <div class="form-element mb-2">
+                                <button class="btn btn-primary">
+                                    Login
+                                </button>
+                            </div>
+
+                            <div class="form-element d-flex justify-content-between">
+                                <a href="/forgot" class="btn-link btn-sm">
+                                    Forgot password?
+                                </a>
+                                <a href="/register" class="btn-link btn-sm">
+                                    Create an account
+                                </a>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <p>
+                            <small>
+                                Sri Lanka Police, Information Technology Division,
+                            </small>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</section>
+</main>
+<footer>
+    <p class="text-center">
+        Designed by - SPECTRO
+    </p>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example').DataTable();
+
+        $('.tab-list li').on('click', function (e) {
+
+            var li = $(this);
+
+            var i = li.index();
+            $('.tab-list li').removeClass("active");
+            li.toggleClass("active");
+
+            $(".tab-content .tab-pane").removeClass("show active");
+            $(".tab-content .tab-pane").eq(i).addClass("show active");
+
+        })
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,103 @@
+---
+layout : default.html
+title : Curfew Pass System | Home
+---
+
+
+
+<section>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card auth-card">
+                    <a href="#" class="btn-link">Instructions </a>
+                    <div class="card-header">
+                        <img src="{{ assets }}images/sl_police_logo.png" alt="">
+                        <h2 class="card-title">
+                            e - Curfew Pass system - Sri Lanka
+                            <span>
+                                Sri Lanka Police
+                            </span>
+                        </h2>
+                        <h3>
+                            Sign in with your social network
+                        </h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="btn-social-network">
+
+                            <a href="#" class="btn btn-primary btn-facebook">
+                                <i class="fa fa-facebook"></i> <span>
+                                    facebook
+                                </span>
+                            </a>
+                            <a href="#" class="btn btn-primary btn-google">
+                                <i class="fa fa-google"></i> <span>
+                                    Google
+                                </span>
+                            </a>
+
+                        </div>
+
+                        <div class="divider">
+
+                            <span>
+                                or
+                            </span>
+                            <hr>
+                        </div>
+
+
+                        <form action="/apply-pass">
+
+
+                            <div class="form-element">
+                                <input required class="form-control" autofocus type="text" name="username"
+                                    placeholder="Username / Email Address" />
+                            </div>
+
+                            <div class="form-element">
+                                <input required class="form-control" type="password" name="password"
+                                    placeholder="Password" />
+                            </div>
+                            <div class="form-element mb-2">
+                                <button class="btn btn-primary">
+                                    Login
+                                </button>
+                            </div>
+
+                            <div class="form-element d-flex justify-content-between">
+                                <a href="/forgot" class="btn-link btn-sm">
+                                    Forgot password?
+                                </a>
+                                <a href="/register" class="btn-link btn-sm">
+                                    Create an account
+                                </a>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <p>
+                            <small>
+                                Sri Lanka Police, Information Technology Division,
+                            </small>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</section>
